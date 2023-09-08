@@ -1,0 +1,17 @@
+[Fetcher]
+timeout_seconds = 30
+cache_dir = "cache"
+
+[EmailHandler]
+hostname = "smtp.gmail.com"
+port = 465
+username = "your_email_address"
+app_password = "your_app_password"
+
+[Redis]
+host = "localhost"
+port = 6379
+db = 0
+
+[Telegram]
+api_token = "TOKEN"

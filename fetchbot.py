@@ -91,6 +91,8 @@ class Fetchbot:
             self.email_handler.send_email(user_email, 'From Fetchbot', '', [file_path])
             self.fetcher.delete_cached_files()
 
+        await update.message.reply_text('Email sent')
+
         return ConversationHandler.END
 
     async def save_email(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -99,7 +101,7 @@ class Fetchbot:
 
         self.data_store.set(user.id, message)
 
-        update.message.reply_text('Email saved')
+        await update.message.reply_text('Email saved')
 
         return State.GET_INPUT
 

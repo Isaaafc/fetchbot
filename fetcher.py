@@ -31,7 +31,7 @@ class Fetcher:
             return content
 
         if title is None:
-            title = re.sub(r'[\.\/\\\'\#\:]', '_', doc.title())
+            title = re.sub(r'[\?\.\/\\\'\#\:•\s]', '_', doc.title())
 
         input_file_path = self.convert_text(title, content)
 
